@@ -1,0 +1,5 @@
+{
+    "database":"AmazonProducts",
+    "server":"ATISL400",
+    "driver":"SQL Server"
+}

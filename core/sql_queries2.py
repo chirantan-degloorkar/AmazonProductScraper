@@ -1,13 +1,21 @@
 import pyodbc
 from core.logger import log_message 
+import json
+
+with open(r'config.json', 'r') as f:
+    config = json.load(f)
+
+server = config['server']
+database = config['database']
+driver = config['driver']    
 
 def get_connection():
     """Create a connection to the SQL Server database."""
     try:
-        connection_string = """
-            DRIVER={SQL Server};
-            SERVER=ATISL400;
-            DATABASE=AmazonProducts;
+        connection_string = f"""
+            DRIVER={driver};
+            SERVER={server};
+            DATABASE={database};
             Trusted_Connection=yes;
             """
         connection = pyodbc.connect(connection_string)
