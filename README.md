@@ -1,6 +1,6 @@
 # AmazonProductScraper
- 
-Input - List of strings - (ASIN)
+FastAPI to scrape and store amazon products
+Takes Input as a List of strings of product_ids(ASIN)
 
 1. Scrapes the following data for each Product.
     - Title
@@ -26,6 +26,5 @@ Instructions to run -
     - create a database and 
     - update the database name in *config.json*
 4. navigate to the following url to try the api. http://127.0.0.1:8000/docs 
-    - ex. input - 
-        - ["B09XL6QBM8", "B09PZHVD8H", "B09VX3JR6G", "B0B4FQQ6WY", "B0BLV34K8F", "B09MBG1PBC"]
+   
 5. Check the logs. 
